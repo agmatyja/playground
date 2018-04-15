@@ -1,14 +1,19 @@
 package listVersusArray;
 
-/**
- * @author Olaf Matyja
- */
 public class ArrayOne {
 
-    public static void main(String[]args) {
-        int[] ia = {3,5,8,6};
-        for(int j = 1; j <= ia.length; j++) {
-            System.out.println("da[" +j + "] = "+ia[j]);
+    static Integer[] intArrayOne = {3,4,5};
+    static String[] stringArrayOne = {"one", "two", "three"};
+    static Boolean[] booleanArrayOne = {true, false, true, false, true};
+    static Object[] objectArrayOne = {1, "two", true};
+
+    public static void main(String[] args) {
+        System.out.println(booleanArrayOne.length);
+        System.out.println(stringArrayOne[2]);
+        for (int i = 0; i < booleanArrayOne.length; i++) {
+            if (booleanArrayOne[i] == true) {
+                System.out.println("Element nr:" + i);
+            }
         }
     }
 
