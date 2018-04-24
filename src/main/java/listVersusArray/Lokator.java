@@ -5,23 +5,24 @@ package listVersusArray;
  */
 public class Lokator {
 
-    private int nrMieszkania;
+    private String nrMieszkania;
     private String nazwisko;
     private int metraz;
 
-    public Lokator(){};
+    public Lokator() {
+    }
 
-    public Lokator(int nrMieszkania, String nazwisko, int metraz){
-        this.metraz = metraz;
-        this.nazwisko = nazwisko;
+    public Lokator(int metraz, String nazwisko, String nrMieszkania) {
         this.nrMieszkania = nrMieszkania;
-    };
+        this.nazwisko = nazwisko;
+        this.metraz = metraz;
+    }
 
-    public int getNrMieszkania() {
+    public String getNrMieszkania() {
         return nrMieszkania;
     }
 
-    public void setNrMieszkania(int nrMieszkania) {
+    public void setNrMieszkania(String nrMieszkania) {
         this.nrMieszkania = nrMieszkania;
     }
 
@@ -40,4 +41,15 @@ public class Lokator {
     public void setMetraz(int metraz) {
         this.metraz = metraz;
     }
+
+    public int getCzynsz() {
+        return metraz * 100;
+    }
+
+    @Override
+    public String toString() {
+        return nazwisko + " nr mieszkania " + nrMieszkania +" metraż " + metraz + " czynsz " + metraz * 100 + " PLN";
+    }
 }
+
+

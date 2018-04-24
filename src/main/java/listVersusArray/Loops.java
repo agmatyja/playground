@@ -27,11 +27,6 @@ public class Loops {
 
         System.out.println("Pętla na liście z i:");
         for (int i = 0; i < stringListBirdie.size(); i++) {
-            System.out.println("Ptaszek nr " + (i+1) +" to " + stringListBirdie.get(i));
-        }
-
-        System.out.println("Pętla na liście z i:");
-        for (int i = 0; i < stringListBirdie.size(); i++) {
             System.out.println(stringListBirdie.get(i));
         }
 
