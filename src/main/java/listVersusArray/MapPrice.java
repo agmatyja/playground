@@ -1,6 +1,5 @@
 package listVersusArray;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class MapPrice {
     static Lokator lok8 = new Lokator(55, "Król", "100");
     static Lokator lok9 = new Lokator(70, "Miś", "19");
 
-    static List<Lokator> lokators = Arrays.asList(lok1, lok2, lok3, lok4, lok5, lok6, lok7, lok8, lok9);
+    static List<Lokator> mieszkancyBloku = Arrays.asList(lok1, lok2, lok3, lok4, lok5, lok6, lok7, lok8, lok9);
     // Jak można wstawić elementy do listy w jednej linijce zamiast się rozpisywać:
 
     // 1. sposób:
@@ -38,17 +37,20 @@ public class MapPrice {
     }
 
     public static void main(String[] args) {
-  //      for (int i = 0; i < lokators.size(); i++) {
-  //          System.out.println(lokators.get(i));
-  //      }
+//        for (int i = 0; i < mieszkancyBloku.size(); i++) {
+//            Lokator lokator = mieszkancyBloku.get(i);
+//            System.out.println(lokator);
+//        }
+
         System.out.println("Po podwyżce czynsz będzie wynosił:");
-        for (int i = 0; i < lokators.size(); i++) {
+        for (int i = 0; i < mieszkancyBloku.size(); i++) {
+            Lokator konkretnyLokator = mieszkancyBloku.get(i);
             // 1. sposób:
-            System.out.println(lokators.get(i).getNazwisko() + ": " + lokators.get(i).getMetraz() * 100 * 1.2 + " PLN");
+            System.out.println(konkretnyLokator.getNazwisko() + ": " + konkretnyLokator.getMetraz() * 100 * 1.2 + " PLN");
             // 2. sposób:
-            System.out.println(lokators.get(i).getNazwisko() + ": " + lokators.get(i).getCzynsz() * 1.2 + " PLN");
+            System.out.println(konkretnyLokator.getNazwisko() + ": " + konkretnyLokator.getCzynsz() * 1.2 + " PLN");
             // 3. sposób:
-            System.out.println(lokators.get(i).getNazwisko() + ": " + podwyzka(lokators.get(i).getCzynsz()) + " PLN");
+            System.out.println(konkretnyLokator.getNazwisko() + ": " + podwyzka(konkretnyLokator.getCzynsz()) + " PLN");
         }
 
     }

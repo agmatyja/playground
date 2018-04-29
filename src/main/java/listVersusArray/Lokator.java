@@ -9,7 +9,7 @@ public class Lokator {
     private String nazwisko;
     private int metraz;
 
-    public Lokator(String pośnik, int i) {
+    public Lokator() {
     }
 
     public Lokator(int metraz, String nazwisko, String nrMieszkania) {

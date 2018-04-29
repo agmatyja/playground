@@ -1,46 +1,33 @@
 
 package listVersusArray;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class MyMap {
-    static HashMap<Integer, String> integerMapHouse = new HashMap();
-    static HashMap<String, String> stringMapHouse = new HashMap();
+    static HashMap<String, Integer> integerMapHouse = new HashMap();
 
     public static void main(String[] args) {
-
-        Map houses = new HashMap();
-        Lokator lok1 = new Lokator( "Kowalski", 45);
-        Lokator lok3 = new Lokator( "Matyja", 99);
-        Lokator lok2 = new Lokator( "Strzelczyk", 60);
-        Lokator lok4 = new Lokator( "Pośnik", 70);
-
         addElementsToMapInteger();
+        
+        System.out.println("Czynsze lokatorskie:");
+        for (String nazwisko : integerMapHouse.keySet()) {
+            Integer getCzynsz = integerMapHouse.get(nazwisko) * 10;
+            System.out.println(nazwisko + ": " + getCzynsz);
+        }
     }
 
     public static void addElementsToMapInteger() {
 
+        integerMapHouse.put("Kowalski", 45);
+        integerMapHouse.put("Matyja", 99);
+        integerMapHouse.put("Strzelczyk", 60);
+        integerMapHouse.put("Pośnik", 70);
 
-        integerMapHouse.put(45, "Kowalski");
-        integerMapHouse.put(99, "Matyja");
-        integerMapHouse.put(60, "Strzelczyk");
-        integerMapHouse.put(70, "Pośnik");
-
-
-        System.out.println("Czynsze lokatorskie:");
-        for (int i = 0; i < integerMapHouse.size(); i++) {
-            System.out.println(integerMapHouse.get("i+1")) + 10integerMapHouse.get(i));
-
-        }
-    }
-        public void addElementsToMapString () {
-
-
-        }
     }
 
+}
 
-        // for (int i = 0; i < stringListHouse.size(); i++)) {
-        //    System.out.println("Ptaszek nr " + (i+1) +" to " + stringListHouse.get(i));
 
