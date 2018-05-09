@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- /* @author Olaf Matyja
+ /* @author Agnieszka Matyja
  */
 
 public class MapPrice {

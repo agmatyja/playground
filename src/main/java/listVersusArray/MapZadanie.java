@@ -3,7 +3,7 @@ package listVersusArray;
 import objects.Mieszkanie;
 
 /**
- * @author Olaf Matyja
+ * @author Agnieszka Matyja
  */
 
 

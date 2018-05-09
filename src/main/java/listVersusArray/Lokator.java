@@ -1,7 +1,7 @@
 package listVersusArray;
 
 /**
- * @author Olaf Matyja
+ * @author Agnieszka Matyja
  */
 public class Lokator {
 

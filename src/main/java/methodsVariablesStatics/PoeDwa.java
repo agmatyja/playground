@@ -1,7 +1,7 @@
 package methodsVariablesStatics;
 
 /**
- * @author Olaf Matyja
+ * @author Agnieszka Matyja
  */
 public class PoeDwa {
 

@@ -1,7 +1,7 @@
 package variablesAndParameters;
 
 /**
- * @author Olaf Matyja
+ * @author Agnieszka Matyja
  */
 public class ExcerciseTwo {
 
