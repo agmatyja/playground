@@ -32,5 +32,14 @@ public class MapZadanie {
         }
     }
 
+    public static void main(String[]args){
+        //MapZadanie = new MapZadanie("Kowalski", 1, 45);
+
+        System.out.println("Czynsze lokatorskie: ");
+        System.out.println(mieszk1.getWlasciciel() + ": " + mieszk1.getMetraz() );
+        System.out.println(mieszk2.getWlasciciel() + ": " + mieszk2.getMetraz() );
+        System.out.println(mieszk3.getWlasciciel() + ": " + mieszk3.getMetraz() );
+        System.out.println(mieszk4.getWlasciciel() + ": " + mieszk4.getMetraz() );
+    }
 }
 
