@@ -48,7 +48,7 @@ public class Lokator {
 
     @Override
     public String toString() {
-        return nazwisko + " nr mieszkania " + nrMieszkania +" metraż " + metraz + " czynsz " + metraz * 100 + " PLN";
+        return nazwisko + " nr mieszkania " + nrMieszkania +" metraż " + metraz + " czynszPerPietro " + metraz * 100 + " PLN";
     }
 }
 

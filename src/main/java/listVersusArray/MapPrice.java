@@ -42,7 +42,7 @@ public class MapPrice {
 //            System.out.println(lokator);
 //        }
 
-        System.out.println("Po podwyżce czynsz będzie wynosił:");
+        System.out.println("Po podwyżce czynszPerPietro będzie wynosił:");
         for (int i = 0; i < mieszkancyBloku.size(); i++) {
             Lokator konkretnyLokator = mieszkancyBloku.get(i);
             // 1. sposób:
