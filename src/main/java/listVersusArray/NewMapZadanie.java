@@ -1,3 +1,5 @@
+package listVersusArray;
+
 import objects.Mieszkanie;
 
 import java.util.HashMap;
@@ -5,11 +7,6 @@ import java.util.HashMap;
 /**
  * @author Agnieszka Matyja
  */
-
-
-
-
-
 
 public class NewMapZadanie {
 
@@ -25,32 +22,26 @@ public class NewMapZadanie {
         mapaMieszkan.put("Kazimierczyk", new Mieszkanie("Kazimierczyk", 9, 60));
     }
 
-    public static int nazwisko() {
-        int nazwisko = 0;
-        return nazwisko;
-    }
-
-    public static int pietro(){
-        int nazwisko = 0;
-        int pietro = 0;
-        return pietro;
-    }
-
-    public static int metraz() {
-        int nazwisko = 0;
-        int metraz = 0;
-        return metraz;
-    }
     public static void main(String[] args) {
 
-            System.out.println(mapaMieszkan.get(nazwisko()) + ": " + mapaMieszkan.pietro + "piętro");
-            System.out.println(mapaMieszkan.get(nazwisko()) + ": " + mapaMieszkan.metraz + "m");
+        addElementsToMapInteger();
+        for (String mieszkaniec : mapaMieszkan.keySet()) {
+            Mieszkanie mieszkanie = mapaMieszkan.get(mieszkaniec);
+            System.out.println(mieszkanie.getWlasciciel() + ": " + mieszkanie.getPietro() + " piętro");
         }
 
-
-        System.out.println("Lokatorzy 9 piętro: ")
-                    System.out.println(mapaMieszkan.int pietro()
+        for (String mieszkaniec : mapaMieszkan.keySet()) {
+            Mieszkanie mieszkanie = mapaMieszkan.get(mieszkaniec);
+            System.out.println(mieszkanie.getWlasciciel() + ": " + mieszkanie.getMetraz() + " m2");
         }
 
+        for (String mieszkaniec : mapaMieszkan.keySet()) {
+            Mieszkanie mieszkanie = mapaMieszkan.get(mieszkaniec);
+            if (mieszkanie.getPietro()==9){
+                System.out.println(mieszkanie.getWlasciciel());
+            }
+        }
 
+    }
+}
 

@@ -22,9 +22,6 @@ public class Wykonawca {
 
         System.out.println(mieszkanie1.getMetraz());
         System.out.println(mieszkanie2.getMetraz());
-
-        // Metody statyczne wykonujemy na obiekcie, czyli Mieszkanie
-        System.out.println(Mieszkanie.statycznaMetoda());
     }
 }
 

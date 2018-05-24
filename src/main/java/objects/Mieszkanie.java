@@ -1,5 +1,7 @@
 package objects;
 
+import listVersusArray.NewMapZadanie;
+
 /**
  * Created by Magdalena Strzelczyk on 29.04.2018.
  */
@@ -47,7 +49,8 @@ public class Mieszkanie {
         this.metraz = metraz;
     }
 
-    public static String statycznaMetoda() {
-        return "Jestem statyczną metodą mieszkania";
+    public static int getNumerBloku() {
+        return 23;
     }
+
 }
