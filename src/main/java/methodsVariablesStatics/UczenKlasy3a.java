@@ -76,7 +76,7 @@ public class UczenKlasy3a {
         return nazwisko;
     }
 
-    // Srednia z matematyki dla dwóch uczniów
+    // Srednia z matematyki dla dwóch uczniów - żeby pokazać jak dochodziłyśmy do ostatecznej wersji metody
     public static Double getSredniaMatematyka(UczenKlasy3a uczen1, UczenKlasy3a uczen2){
         Double srednia = (uczen1.getOcenaZmatematyki() + uczen2.getOcenaZmatematyki()) / 2.0;
         return srednia;
