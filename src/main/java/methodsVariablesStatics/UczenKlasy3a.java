@@ -13,12 +13,10 @@ public class UczenKlasy3a {
     private Integer ocenaZmatematyki;
     private Integer ocenaZpolskiego;
     private Integer ocenaZmuzyki;
+    private Integer ocenaZbiologii;
     private static String matematyczka = "Kunegunda Czopek";
 
-    public UczenKlasy3a(String janek, String kowalski, int i, int i1, int i2, int i3, int i4){
-    }
-
-    public UczenKlasy3a(String imieUcznia, String nazwisko, Integer nrWdzienniku, Integer ocenaZmatematyki, Integer ocenaZpolskiego, Integer ocenaZMuzyki){
+    public UczenKlasy3a(String imieUcznia, String nazwisko, Integer nrWdzienniku, Integer ocenaZmatematyki, Integer ocenaZpolskiego, Integer ocenaZmuzyki, Integer ocenaZbiologii){
         // System.out.println("blabla");
         this.imię = imieUcznia;
         this.nazwisko = nazwisko;
@@ -26,12 +24,11 @@ public class UczenKlasy3a {
         this.ocenaZmatematyki = ocenaZmatematyki;
         this.ocenaZpolskiego = ocenaZpolskiego;
         this.ocenaZmuzyki = ocenaZmuzyki;
+        this.ocenaZbiologii = ocenaZbiologii;
     }
 
     public UczenKlasy3a() {
-
     }
-
 
     public String getImię() {
         return imię;
@@ -57,17 +54,25 @@ public class UczenKlasy3a {
         this.nrWdzienniku = nrWdzienniku;
     }
 
-
     public void setOcenaZmatematyki(Integer ocenaZmatematyki) {
         this.ocenaZmatematyki = ocenaZmatematyki;
     }
+
     public Integer getOcenaZmatematyki() {
         return ocenaZmatematyki;
+    }
+
+    public void setOcenaZbiologii(Integer ocenaZbiologii) {
+        this.ocenaZbiologii = ocenaZbiologii;
+    }
+    public Integer getOcenaZbiologii() {
+        return ocenaZbiologii;
     }
 
     public void setOcenaZmuzyki(Integer ocenaZmuzyki) {
         this.ocenaZmuzyki = ocenaZmuzyki;
     }
+
     public Integer getOcenaZmuzyki() {
         return ocenaZmuzyki;
     }
@@ -80,46 +85,16 @@ public class UczenKlasy3a {
         this.ocenaZpolskiego = ocenaZpolskiego;
     }
 
+    public Double getSredniaOcen() {
+        Double srednia = 0.0;
+        if (ocenaZpolskiego != null & ocenaZbiologii != null & ocenaZmatematyki != null & ocenaZmuzyki != null) {
+            srednia = (ocenaZpolskiego + ocenaZbiologii + ocenaZmatematyki + ocenaZmuzyki)/4.0;
+        }
+        return srednia;
+    }
+
     public static String getMatematyczka() {
         return matematyczka;
-    }
-
-    public static String getNazwisko(UczenKlasy3a uczen){
-        String nazwisko = uczen.getNazwisko();
-        return nazwisko;
-    }
-
-    // Srednia z matematyki dla dwóch uczniów - żeby pokazać jak dochodziłyśmy do ostatecznej wersji metody
-    public static Double getSredniaMatematyka(UczenKlasy3a uczen1, UczenKlasy3a uczen2){
-        Double srednia = (uczen1.getOcenaZmatematyki() + uczen2.getOcenaZmatematyki()) / 2.0;
-        return srednia;
-    }
-
-    // Srednia z matematyki dla dowolnej liczby uczniów
-    public static Double getSredniaMatematyka(List<UczenKlasy3a> uczniowie){
-        Double suma = 0.0;
-        for (UczenKlasy3a uczen : uczniowie) suma = suma + uczen.getOcenaZmatematyki();
-        Double srednia = suma / uczniowie.size();
-        return srednia;
-    }
-
-    // ====================================================
-
-    public static void main(String[] args){
-        UczenKlasy3a janek = new UczenKlasy3a("Janek", "Kowalski", 1, 4, 5, 5, 6);
-        System.out.println(janek.getImię());
-        System.out.println(janek.getMatematyczka());
-
-        UczenKlasy3a cienkiBolek = new UczenKlasy3a();
-        System.out.println(cienkiBolek.getImię());
-        System.out.println(cienkiBolek.getMatematyczka());
-
-        cienkiBolek.setOcenaZmatematyki(3);
-        System.out.println(getSredniaMatematyka(janek, cienkiBolek));
-        System.out.println(getSredniaMatematyka(Arrays.asList(janek, cienkiBolek)));
-
-        System.out.println(janek.getNazwisko());
-        System.out.println(getNazwisko(janek));
     }
 
 }
