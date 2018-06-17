@@ -12,18 +12,24 @@ public class UczenKlasy3a {
     private Integer nrWdzienniku;
     private Integer ocenaZmatematyki;
     private Integer ocenaZpolskiego;
+    private Integer ocenaZmuzyki;
     private static String matematyczka = "Kunegunda Czopek";
 
-    public UczenKlasy3a(){
+    public UczenKlasy3a(String janek, String kowalski, int i, int i1, int i2, int i3, int i4){
     }
 
-    public UczenKlasy3a(String imieUcznia, String nazwisko, Integer nrWdzienniku, Integer ocenaZmatematyki, Integer ocenaZpolskiego){
+    public UczenKlasy3a(String imieUcznia, String nazwisko, Integer nrWdzienniku, Integer ocenaZmatematyki, Integer ocenaZpolskiego, Integer ocenaZMuzyki){
         // System.out.println("blabla");
         this.imię = imieUcznia;
         this.nazwisko = nazwisko;
         this.nrWdzienniku = nrWdzienniku;
         this.ocenaZmatematyki = ocenaZmatematyki;
         this.ocenaZpolskiego = ocenaZpolskiego;
+        this.ocenaZmuzyki = ocenaZmuzyki;
+    }
+
+    public UczenKlasy3a() {
+
     }
 
 
@@ -51,12 +57,19 @@ public class UczenKlasy3a {
         this.nrWdzienniku = nrWdzienniku;
     }
 
+
+    public void setOcenaZmatematyki(Integer ocenaZmatematyki) {
+        this.ocenaZmatematyki = ocenaZmatematyki;
+    }
     public Integer getOcenaZmatematyki() {
         return ocenaZmatematyki;
     }
 
-    public void setOcenaZmatematyki(Integer ocenaZmatematyki) {
-        this.ocenaZmatematyki = ocenaZmatematyki;
+    public void setOcenaZmuzyki(Integer ocenaZmuzyki) {
+        this.ocenaZmuzyki = ocenaZmuzyki;
+    }
+    public Integer getOcenaZmuzyki() {
+        return ocenaZmuzyki;
     }
 
     public Integer getOcenaZpolskiego() {
@@ -85,9 +98,7 @@ public class UczenKlasy3a {
     // Srednia z matematyki dla dowolnej liczby uczniów
     public static Double getSredniaMatematyka(List<UczenKlasy3a> uczniowie){
         Double suma = 0.0;
-        for (UczenKlasy3a uczen : uczniowie) {
-            suma = suma + uczen.getOcenaZmatematyki();
-        }
+        for (UczenKlasy3a uczen : uczniowie) suma = suma + uczen.getOcenaZmatematyki();
         Double srednia = suma / uczniowie.size();
         return srednia;
     }
@@ -95,7 +106,7 @@ public class UczenKlasy3a {
     // ====================================================
 
     public static void main(String[] args){
-        UczenKlasy3a janek = new UczenKlasy3a("Janek", "Kowalski", 1, 4, 5);
+        UczenKlasy3a janek = new UczenKlasy3a("Janek", "Kowalski", 1, 4, 5, 5, 6);
         System.out.println(janek.getImię());
         System.out.println(janek.getMatematyczka());
 
