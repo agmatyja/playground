@@ -14,9 +14,13 @@ public class UczenKlasy3a {
     private Integer ocenaZpolskiego;
     private Integer ocenaZmuzyki;
     private Integer ocenaZbiologii;
+    private String zachowanie;
     private static String matematyczka = "Kunegunda Czopek";
+    private static String polonistka = "Hermenegilda Brzdąc";
+    private static String muzyczka = "Leokadia Zając";
+    private static String biolożka = "Perpetua Cichy";
 
-    public UczenKlasy3a(String imieUcznia, String nazwisko, Integer nrWdzienniku, Integer ocenaZmatematyki, Integer ocenaZpolskiego, Integer ocenaZmuzyki, Integer ocenaZbiologii){
+    public UczenKlasy3a(String imieUcznia, String nazwisko, Integer nrWdzienniku, Integer ocenaZmatematyki, Integer ocenaZpolskiego, Integer ocenaZmuzyki, Integer ocenaZbiologii, String zachowanie){
         // System.out.println("blabla");
         this.imię = imieUcznia;
         this.nazwisko = nazwisko;
@@ -25,6 +29,7 @@ public class UczenKlasy3a {
         this.ocenaZpolskiego = ocenaZpolskiego;
         this.ocenaZmuzyki = ocenaZmuzyki;
         this.ocenaZbiologii = ocenaZbiologii;
+        this.zachowanie = zachowanie;
     }
 
     public UczenKlasy3a() {
@@ -84,6 +89,13 @@ public class UczenKlasy3a {
     public void setOcenaZpolskiego(Integer ocenaZpolskiego) {
         this.ocenaZpolskiego = ocenaZpolskiego;
     }
+    public String getZachowanie() {
+        return zachowanie;
+    }
+
+    public void setZachowanie(String zachowanie) {
+        this.imię = zachowanie;
+    }
 
     public Double getSredniaOcen() {
         Double srednia = 0.0;
@@ -96,5 +108,13 @@ public class UczenKlasy3a {
     public static String getMatematyczka() {
         return matematyczka;
     }
-
+    public static String getPolonistka() {
+        return polonistka;
+    }
+    public static String getMuzyczka() {
+        return muzyczka;
+    }
+    public static String getBiolożka() {
+        return biolożka;
+    }
 }

@@ -23,7 +23,7 @@ public class ModyfikacjeUczniów {
         Double srednia = suma / uczniowie.size();
         return srednia;
     }
-    // Srednia ocen dla dowolnej ucznia
+    // Srednia ocen dla dowolnego ucznia
     public static Double getSredniaOcen(UczenKlasy3a uczen){
         Double srednia = (uczen.getOcenaZmatematyki() + uczen.getOcenaZpolskiego() + uczen.getOcenaZmuzyki() + uczen.getOcenaZbiologii())/4.0;
         return srednia;
@@ -31,12 +31,12 @@ public class ModyfikacjeUczniów {
 
     public static void main(String[] args){
 
-        UczenKlasy3a moniczka = new UczenKlasy3a("Moniczka", "Nowak", 2, 3, 3, 5, 3);
-        UczenKlasy3a dżessika = new UczenKlasy3a("Dżessika", "Pupas", 3, 4, 3, 4, 4);
-        UczenKlasy3a kunegunda = new UczenKlasy3a("Kunegunda", "Ryćko", 4, 4, 4, 4, 2);
-        UczenKlasy3a bolek = new UczenKlasy3a("Bolek", "Tajniak", 5, 2, 3, 5, 5);
-        UczenKlasy3a lolek = new UczenKlasy3a("Lolek", "Wędrowycz", 6, 6, 6, 5, 6);
-        UczenKlasy3a tolek = new UczenKlasy3a("Tolek", "Żulski", 7, 5, 2, 6, 4);
+        UczenKlasy3a moniczka = new UczenKlasy3a("Moniczka", "Nowak", 2, 3, 3, 5, 3, "poprawne");
+        UczenKlasy3a dżessika = new UczenKlasy3a("Dżessika", "Pupas", 3, 4, 3, 4, 4, "dobre");
+        UczenKlasy3a kunegunda = new UczenKlasy3a("Kunegunda", "Ryćko", 4, 4, 4, 4, 2, "dobre");
+        UczenKlasy3a bolek = new UczenKlasy3a("Bolek", "Tajniak", 5, 2, 3, 5, 5, "dobre");
+        UczenKlasy3a lolek = new UczenKlasy3a("Lolek", "Wędrowycz", 6, 6, 6, 5, 6, "wzorowe");
+        UczenKlasy3a tolek = new UczenKlasy3a("Tolek", "Żulski", 7, 5, 2, 6, 4, "dobre");
 
         System.out.println("Sposób 1:");
         System.out.println(getSredniaOcen(moniczka));
