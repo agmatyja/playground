@@ -64,6 +64,9 @@ public class KartaUcznia {
 
         System.out.println("Lepszą średnią z matematyki mają " + getPorównanieMatematyka(moniczka, dżessika, kunegunda, bolek, lolek, tolek));
         getKartaNauczycieli();
+
+        System.out.println("Lepszą średnią z polskiego mają " + getPorównaniePolski(moniczka, dżessika, kunegunda, bolek, lolek, tolek));
+        getKartaNauczycieli();
     }
 
     private static String getPorównanieMatematyka(UczenKlasy3a uczen1, UczenKlasy3a uczen2, UczenKlasy3a uczen3, UczenKlasy3a uczen4, UczenKlasy3a uczen5, UczenKlasy3a uczen6) {
@@ -79,6 +82,18 @@ public class KartaUcznia {
         return "Ani chłopcy ani dziewczynki";
     }
 
+    private static String getPorównaniePolski(UczenKlasy3a uczen1, UczenKlasy3a uczen2, UczenKlasy3a uczen3, UczenKlasy3a uczen4, UczenKlasy3a uczen5, UczenKlasy3a uczen6) {
+        double dziewczynkiPolski = (uczen1.getOcenaZpolskiego() + uczen2.getOcenaZpolskiego() + uczen3.getOcenaZpolskiego()) / 3.0;
+        double chłopcyPolski = (uczen4.getOcenaZpolskiego() + uczen5.getOcenaZpolskiego() + uczen6.getOcenaZpolskiego()) / 3.0;
+        if (dziewczynkiPolski > chłopcyPolski) {
+            return "dziewczynki";
+        }
+
+        if (dziewczynkiPolski < chłopcyPolski) {
+            return "chłopcy";
+        }
+        return "Ani chłopcy ani dziewczynki";
+    }
 }
 
 
