@@ -23,6 +23,13 @@ public class ModyfikacjeUczniów {
         Double srednia = suma / uczniowie.size();
         return srednia;
     }
+
+    public static double getSredniaPolski(List<UczenKlasy3a> uczniowie){
+        Double suma = 0.0;
+        for (UczenKlasy3a uczen : uczniowie) suma = suma + uczen.getOcenaZpolskiego();
+        Double srednia = suma / uczniowie.size();
+        return srednia;
+    }
     // Srednia ocen dla dowolnego ucznia
     public static Double getSredniaOcen(UczenKlasy3a uczen){
         Double srednia = (uczen.getOcenaZmatematyki() + uczen.getOcenaZpolskiego() + uczen.getOcenaZmuzyki() + uczen.getOcenaZbiologii())/4.0;
