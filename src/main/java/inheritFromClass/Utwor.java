@@ -1,4 +1,4 @@
-package inheritance;
+package inheritFromClass;
 
 public class Utwor {
 
@@ -34,5 +34,9 @@ public class Utwor {
 
     public void setGatunek(String gatunek) {
         this.gatunek = gatunek;
+    }
+
+    public void metodaDoNadpisania() {
+        System.out.println("Ta metoda będzie nadpisana metodą z klasy dziedziczącej.");
     }
 }
