@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Magdalena Strzelczyk on 31.05.2018.
  */
-public class UczenKlasy3a {
+public class UczenKlasy3a implements Comparable<UczenKlasy3a> {
     private String imię;
     private String nazwisko;
     private Integer nrWdzienniku;
@@ -116,5 +116,32 @@ public class UczenKlasy3a {
     }
     public static String getBiolożka() {
         return biolożka;
+    }
+
+    @Override
+    public int compareTo(UczenKlasy3a jestemGlupimParametrem) {
+        if(nazwisko.equals(jestemGlupimParametrem.nazwisko))
+            if(imię.equals(jestemGlupimParametrem.imię))
+                return 0;
+            else if(imię.compareTo(jestemGlupimParametrem.imię)>0)
+                return 1;
+            else
+                return -1;
+        else if(nazwisko.compareTo(jestemGlupimParametrem.nazwisko)>0)
+            return 1;
+        else
+            return -1;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "UczenKlasy3a{" +
+                "imię=" + imię +
+                ", nazwisko=" + nazwisko +
+                ", nrWdzienniku=" + nrWdzienniku +
+                ", zachowanie=" + zachowanie +
+                ", średnia ocen= " + getSredniaOcen() + ")";
     }
 }
