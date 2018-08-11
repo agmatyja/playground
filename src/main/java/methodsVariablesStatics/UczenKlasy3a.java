@@ -118,7 +118,6 @@ public class UczenKlasy3a implements Comparable<UczenKlasy3a> {
         return biolożka;
     }
 
-    @Override
     public int compareTo(UczenKlasy3a jestemGlupimParametrem) {
         if(nazwisko.equals(jestemGlupimParametrem.nazwisko))
             if(imię.equals(jestemGlupimParametrem.imię))
