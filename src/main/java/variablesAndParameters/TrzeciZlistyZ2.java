@@ -1,5 +1,4 @@
 package variablesAndParameters;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -10,7 +9,7 @@ public class TrzeciZlistyZ2 {
     static List<String> lista1a = Arrays.asList("elem1a", "elem2a", "elem3a", "elem4a");
     static List<String> lista1b = Arrays.asList("elem1b", "elem2b");
 
-    // 1. Parametry to wartość którą podajemy w nawiasach w definicji metody, czyli w poniższym przykładzie jakasLista
+    // 1. Parametry to wartość którą podajemy w nawiasach w definicji metody, czyli w poniższym przykładzie x
     // 2. W definicji metody możemy podać dowolną liczbę parametrów, oddzielamy je przecinkami
     // 3. Razem z nazwą parametru (dowolną, wymyśloną przez nas) koniecznie podajemy jego typ, czyli np. jak poniżej List<String>
     // 4. W ciele metody opisujemy, co robimy z parametrem - używając nazwy, którą mu danaliśmy

@@ -15,7 +15,7 @@ public  class DzialaniaZ1{
 
     public static Integer suma (int liczba1, int liczba2){
         int suma = liczba1 + liczba2;
-    return suma;
+        return suma;
     }
 
     public static Integer różnica(int liczba1, int liczba2) {
